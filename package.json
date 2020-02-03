@@ -1,0 +1,19 @@
+{
+  "name": "feelings",
+  "version": "1.0.0",
+  "description": "a social app that allows users to post their status",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "social",
+    "media"
+  ],
+  "author": "adesignsm",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

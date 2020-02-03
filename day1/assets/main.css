@@ -1,0 +1,44 @@
+body, html {
+	padding: 0;
+	margin: 0;
+	min-height: 100%;
+	min-width: 100%;
+	background-color: #333;
+}
+
+#button-container {
+	margin-top: 20%;
+	text-align: center;
+}
+
+button:focus {
+	outline: none;
+}
+
+#button-container button {
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-right: 2.5%;
+	padding-left: 2.5%;
+	font-weight: bolder;
+	font-size: 250%;
+	margin-right: 3%;
+	background-color: #fff;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-ms-transition: all .2s ease;
+	-o-transition: all .2s ease;
+}
+
+#button-container button:hover {
+	background-color: #ff6961;
+	padding-top: 1.8%;
+	padding-bottom: 1.8%;
+	padding-right: 2.3%;
+	padding-left: 2.3%;
+	color: #fff;
+}

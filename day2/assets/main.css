@@ -1,0 +1,91 @@
+body, html {
+	padding: 0;
+	margin: 0;
+	min-height: 100%;
+	min-width: 100%;
+	font-family: 'Roboto Mono', monospace;
+	background-color: #333;
+	overflow: hidden;
+}
+
+span {
+	cursor: pointer;
+}
+
+#clock-container {
+	text-align: center;
+	margin-top: 10%;
+}
+
+#clock-container h1 {
+	font-size: 500%;
+	color: #fff;
+}
+
+#progress-container {
+	position: absolute;
+	top: 50%;
+	left: 20%;
+	height: 100%;
+	width: 100%;
+}
+
+#progress-bar-h {
+	height: 10%;
+	width: 1%;
+	background-color: #ff6961;
+
+	-webkit-transition: all .1s ease;
+	-moz-transition: all .1s ease;
+	-ms-transition: all .1s ease;
+	-o-transition: all .1s ease;
+	transition: all .1s ease;
+}
+
+#progress-bar-m {
+	height: 10%;
+	width: 1%;
+	background-color: #aec6cf;
+
+	-webkit-transition: all .1s ease;
+	-moz-transition: all .1s ease;
+	-ms-transition: all .1s ease;
+	-o-transition: all .1s ease;
+	transition: all .1s ease;
+}
+
+#progress-bar-s {
+	height: 10%;
+	width: 1%;
+	background-color: #11ff88;
+
+	-webkit-transition: all .1s ease;
+	-moz-transition: all .1s ease;
+	-ms-transition: all .1s ease;
+	-o-transition: all .1s ease;
+	transition: all .1s ease;
+}
+
+#inc-dec-button-container {
+	position: absolute;
+	top: 35%;
+	width: 100%;
+	left: 75%;
+}
+
+#inc-dec-button-container button {
+	border: none;
+	background-color: #61a8ff;
+	color: #fff;
+	opacity: 0;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 120%;
+	padding: 2%;
+	display: inline;
+
+	-webki-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
