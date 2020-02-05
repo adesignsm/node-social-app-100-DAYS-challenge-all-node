@@ -75,3 +75,10 @@ button:hover {
 	color: #fff;
 	background-color: #333;
 }
+
+@media only screen and (min-width: 100px) and (max-width: 1000px) {
+
+	#input-container {
+		zoom: 2;
+	}
+}
