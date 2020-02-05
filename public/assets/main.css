@@ -43,6 +43,7 @@ input[type=text] {
 	padding-right: 3%;
 	padding-left: 3%;
 	vertical-align: top;
+	margin-bottom: 3%;
 
 }
 
@@ -78,5 +79,14 @@ button:hover {
 
 @media only screen and (min-width: 100px) and (max-width: 1000px) {
 
-	/*STILL NEED TO ADD MOBILE STYLING HERE */
+	#input-container {
+		margin-top: 130%;
+		margin-left: 2%;
+		width: 90%;
+		padding: 3%;
+	}
+
+	#input-container h2 {
+		font-size: 120%;
+	}
 }
