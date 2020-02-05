@@ -6,8 +6,7 @@ var entries = JSON.parse(data);
 
 var express = require("express");
 var app = express();
-var port = var port = process.env.PORT || 8080;
-var server = app.listen(port, listening);
+var server = app.listen(3000, listening);
 
 function listening() {
 
