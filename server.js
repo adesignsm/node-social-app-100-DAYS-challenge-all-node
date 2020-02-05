@@ -4,7 +4,6 @@ console.log("server is running");
 var fs = require("fs");
 var data = fs.readFileSync("db.json");
 var entries = JSON.parse(data);
-var git = require("simple-git");
 
 //server setup
 var express = require("express");
@@ -54,9 +53,6 @@ function add_feeling(request, response) {
 			}
 
 			response.send(reply);
-			git.add([data]);
-			git.commit("adding db", data);
-			git.push(origin, master);
 		}
 	}
 }
