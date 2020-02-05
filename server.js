@@ -1,22 +1,27 @@
 console.log("server is running");
 
+//fs require and data vars
 var fs = require("fs");
 var data = fs.readFileSync("db.json");
 var entries = JSON.parse(data);
 
+//server setup
 var express = require("express");
 var app = express();
 var port = process.env.PORT || 3000;
 var server = app.listen(port, listening);
 
+//logs that server is running
 function listening() {
 
 	console.log("waiting for action");
 }
 
+//new express.js feature to use static files
 app.use(express.static("./public/", {index: "index.html"}));
 app.get("/database/:feeling", add_feeling);
 
+//add in a new post
 function add_feeling(request, response) {
 
 	var data = request.params;
@@ -52,6 +57,7 @@ function add_feeling(request, response) {
 	}
 }
 
+//populates the data
 app.get("/all", show_db);
 
 //url to get the whole database

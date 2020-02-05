@@ -1,9 +1,11 @@
+//retrive all data
 function setup() {
 	loadJSON("/all", got_data);
 	console.log("running");
 	redraw_data();
 }
 
+//add event handler to the submit button and direct value to the url
 document.getElementById("submit").onclick = function(event) {
 	console.log("clicked");
 
@@ -19,11 +21,13 @@ document.getElementById("submit").onclick = function(event) {
 	}
 }
 
+//redraw data when fired
 function redraw_data() {
 
 	loadJSON("/all", got_data);
 }
 
+//when data is recieved this function is fired
 function got_data(data) {
 
 	var h1_arr = document.getElementsByTagName("h1");
