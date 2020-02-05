@@ -62,6 +62,7 @@ function got_data(data) {
 		h1.style.background = colourArr[Math.floor(Math.random() * colourArr.length)];
 
 		$("h1").stop().animate({opacity: "1"}, 1500);
+		$("h1").draggable();
 		console.log(x, y);
 	}
 
