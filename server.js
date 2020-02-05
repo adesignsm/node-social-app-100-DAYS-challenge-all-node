@@ -14,7 +14,7 @@ function listening() {
 	console.log("waiting for action");
 }
 
-app.use(express.static("/public/", {index: "index.html"}));
+app.use(express.static("./public/", {index: "index.html"}));
 app.get("/database/:feeling", add_feeling);
 
 function add_feeling(request, response) {
