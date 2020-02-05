@@ -2,12 +2,9 @@ body, html {
 	padding: 0;
 	margin: 0;
 	background-color: #333;
-	font-family: Helvetica, sans-serif;
-}
-
-#input-container {
-	margin-top: 22%;
-	text-align: center;
+	font-family: 'Roboto Mono', monospace;
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
 }
 
 h1 {
@@ -15,4 +12,66 @@ h1 {
 	margin-left: 5%;
 	opacity: 0;
 	font-size: 120%;
+	padding: 1%;
+	border-radius: 5px;
+}
+
+#input-container {
+	position: absolute;
+	margin-top: 20%;
+	margin-left: 35%;
+	text-align: center;
+	background-color: #fff;
+	width: 30%;
+	padding: 2%;
+	border-radius: 4px;
+	z-index: 1;
+}
+
+#input-h1 {
+	color: #000;
+}
+
+input[type=text] {
+	background-color: #fff;
+	border-radius: 3px;
+	border: 2px solid #333;
+	font-size: 150%;
+	font-family: 'Roboto Mono', monospace;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	padding-right: 3%;
+	padding-left: 3%;
+	vertical-align: top;
+
+}
+
+input[type=text]:focus {
+	outline: none;
+}
+
+button {
+	background-color: #fff;
+	color: #000;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 120%;
+	font-weight: bolder;
+	border: 2px solid #333;
+	border-radius: 3px;
+	padding-left: 6%;
+	padding-right: 6%;
+	padding-top: 3.5%;
+	padding-bottom: 3.5%;
+	cursor: pointer;
+
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+button:hover {
+	color: #fff;
+	background-color: #333;
 }

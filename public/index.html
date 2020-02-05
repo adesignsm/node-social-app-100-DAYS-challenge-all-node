@@ -2,18 +2,21 @@
 
 <html>
 	<head>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
 		<link rel = "stylesheet" type = "text/css" href = "assets/main.css" />
 
 		<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script type = "text/javascript" src = "scripts/main.js"></script>
 	</head>
 
 	<body>
 		<div id = "input-container">
-			<input type = "text" id = "feeling">
-			<button id = "submit"> submit </button>
+			<h2> You may type and post whatever you find fit. Enjoy. </br></br>hint: if you cant see your post, its hiding! Refresh the page</h2>
+			<input type = "text" id = "feeling" autofocus>
+			<button id = "submit"> post </button>
 		</div>
 		<div id = "word-container"></div>
+
+		<script type = "text/javascript" src = "scripts/main.js"></script>
 	</body>
 </html>
