@@ -63,6 +63,7 @@ function got_data(data) {
 
 		$("h1").stop().animate({opacity: "1"}, 1500);
 		$("h1").draggable();
+		$("#input-container").draggable();
 		console.log(x, y);
 	}
 
