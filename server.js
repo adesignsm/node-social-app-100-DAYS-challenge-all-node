@@ -46,6 +46,7 @@ function add_feeling(request, response) {
 
 		function finished_adding(err) {
 			console.log(err);
+			console.log("success");
 
 			reply = {
 
