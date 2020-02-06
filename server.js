@@ -4,12 +4,36 @@ console.log("server is running");
 var fs = require("fs");
 var data = fs.readFileSync("db.json");
 var entries = JSON.parse(data);
+var pg_db = 
 
 //server setup
 var express = require("express");
 var app = express();
 var port = process.env.PORT || 3000;
 var server = app.listen(port, listening);
+
+var {Client} = require("pg");
+var client = new Client({
+	connectionString: process.env.DATABASE_URL,
+	ssl: true
+});
+
+client.connect();
+
+client.query("SELECT table_schema, table_name FROM information_schema.tables;", (err, res)) => {
+
+	if (err) {
+		throw err;
+	
+	} else {
+		console.log("connected");
+	}
+
+	for (var row = 0; row < res.rows.length; row++) {
+		console.log(JSON.stringify(row));
+	}
+	client.end();
+});
 
 //logs that server is running
 function listening() {
