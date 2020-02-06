@@ -4,7 +4,6 @@ console.log("server is running");
 var fs = require("fs");
 var data = fs.readFileSync("db.json");
 var entries = JSON.parse(data);
-var pg_db = 
 
 //server setup
 var express = require("express");
