@@ -11,8 +11,8 @@ var app = express();
 var port = process.env.PORT || 3000;
 var server = app.listen(port, listening);
 
-var {Client} = require("pg");
-var client = new Client({
+const {Client} = require("pg");
+const client = new Client({
 	connectionString: process.env.DATABASE_URL,
 	ssl: true
 });
@@ -28,7 +28,7 @@ client.query("SELECT table_schema, table_name FROM information_schema.tables;", 
 		console.log("connected");
 	}
 
-	for (var row = 0; row < res.rows.length; row++) {
+	for (let row of res.rows) {
 		console.log(JSON.stringify(row));
 	}
 	client.end();
