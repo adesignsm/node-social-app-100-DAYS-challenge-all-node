@@ -34,6 +34,8 @@ client.query("SELECT table_schema, table_name FROM information_schema.tables;", 
 	client.end();
 });
 
+console.log(client)
+
 //logs that server is running
 function listening() {
 
