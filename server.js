@@ -11,28 +11,28 @@ var app = express();
 var port = process.env.PORT || 3000;
 var server = app.listen(port, listening);
 
-const {Client} = require("pg");
-const client = new Client({
-	connectionString: process.env.DATABASE_URL,
-	ssl: true
-});
+// const {Client} = require("pg");
+// const client = new Client({
+// 	connectionString: process.env.DATABASE_URL,
+// 	ssl: true
+// });
 
-client.connect();
+// client.connect();
 
-client.query("SELECT table_schema, table_name FROM information_schema.tables;", (err, res)) => {
+// client.query("SELECT table_schema, table_name FROM information_schema.tables;", (err, res)) => {
 
-	if (err) {
-		throw err;
+// 	if (err) {
+// 		throw err;
 	
-	} else {
-		console.log("connected");
-	}
+// 	} else {
+// 		console.log("connected");
+// 	}
 
-	for (let row of res.rows) {
-		console.log(JSON.stringify(row));
-	}
-	client.end();
-});
+// 	for (let row of res.rows) {
+// 		console.log(JSON.stringify(row));
+// 	}
+// 	client.end();
+// });
 
 //logs that server is running
 function listening() {
