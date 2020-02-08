@@ -12,28 +12,15 @@ var app = express();
 var port = process.env.PORT || 3000;
 var server = app.listen(port, listening);
 
-const { Pool } = require("pg");
-const pool = new Pool({
-	connectionString: process.env.DATABASE_URL,
-	ssl: true
-});
+const pg = require("pg");
+const connectionString = process.env.DATABASE_URL;
 
-.get("/db", async(req, res) => {
+const client = new pg.Client(connectionString);
 
-	try {
-		const client = await pool.connect();
-		const results = await client.query("SELECT * FROM test_table");
-		const results = { "results" : (result) ? result.rows: null};
+client.connect();
 
-		res.render("pages/db", results);
-		client.release();
-
-	} catch(err) {
-
-		console.log(err);
-		res.send("Error " + err);
-	}
-});
+const query = client.query("CREATE TABLE items(id SERIAL PRIMARY KEY, VARCHAR(40) not null, complete BOOLEAN");
+query.on("end", () => {client.end(); });	
 
 
 //logs that server is running
