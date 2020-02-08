@@ -65,7 +65,7 @@ function add_feeling(request, response) {
 
 		entries[feeling] = feeling;
 		var data = JSON.stringify(entries, null, 2);
-		fs.writeFile("db.json", data, finished_adding);
+		fs.writeFile("/db.json", data, finished_adding);
 
 		function finished_adding(err) {
 			console.log(err);
