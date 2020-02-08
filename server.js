@@ -10,18 +10,7 @@ var Github = require("github-api");
 var express = require("express");
 var app = express();
 var port = process.env.PORT || 3000;
-var server = app.listen(port, listening);
-
-const pg = require("pg");
-const connectionString = process.env.DATABASE_URL;
-
-const client = new pg.Client(connectionString);
-
-client.connect();
-
-const query = client.query("CREATE TABLE items(id SERIAL PRIMARY KEY, VARCHAR(40) not null, complete BOOLEAN");
-query.on("end", () => {client.end(); });	
-
+var server = app.listen(port, listening);	
 
 //logs that server is running
 function listening() {
